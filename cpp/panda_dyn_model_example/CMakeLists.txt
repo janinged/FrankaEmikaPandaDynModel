@@ -1,4 +1,5 @@
-cmake_minimum_required (VERSION 2.6)
+# cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 3.5)
 project (panda_dyn_model_example)
 
 ## environment settings

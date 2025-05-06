@@ -155,8 +155,8 @@ int main(int argc, char **argv)
 	while(duration.count() <= Ttrj + T){
 		old = current;
 		current = chrono::high_resolution_clock::now();
-		duration = chrono::duration_cast<chrono::duration<double>>(current-start);
-		delta_t = chrono::duration_cast<chrono::duration<double>>(current - old);
+		duration = chrono::duration_cast<chrono::duration<double> >(current-start);
+		delta_t = chrono::duration_cast<chrono::duration<double> >(current - old);
 
 		// compute the exciting velocity trajectory and compute the joint acceleration and position from it
 		for(int i=0;i<nJoints;i++){
@@ -212,7 +212,7 @@ int main(int argc, char **argv)
 		}
 
 		// make some performance analysis on the execution time
-		delta_t = chrono::duration_cast<chrono::duration<double>>(toc-tic);
+		delta_t = chrono::duration_cast<chrono::duration<double> >(toc-tic);
 //		cout << "delta time: " << delta_t.count() << endl;
 		if(delta_t.count() < min){
 			min = delta_t.count();
