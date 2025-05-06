@@ -1,2 +1,3 @@
 cpp/build/*
 !cpp/build/exciting*.txt
+*.asv
