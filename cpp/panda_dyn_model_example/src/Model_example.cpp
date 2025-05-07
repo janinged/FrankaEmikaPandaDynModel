@@ -129,13 +129,11 @@ int main(int argc, char **argv)
 	timeFile.open("exciting_traj_time.txt",ios::out);
 
 	// uncomment this section if you want to collect also this data into files
-	/*
 	ofstream gravityFile, massFile, coriolisFile, frictionFile;
 	gravityFile.open("exciting_traj_gravity.txt",ios::out);
 	massFile.open("exciting_traj_mass.txt",ios::out);
 	coriolisFile.open("exciting_traj_coriolis.txt",ios::out);
 	frictionFile.open("exciting_traj_friction.txt",ios::out);
-	*/
 
 	Eigen::Vector7d  q,dq,dq_old,ddq, tau,gravity, friction;
 	Eigen::Matrix7d mass, coriolis;
@@ -198,7 +196,6 @@ int main(int argc, char **argv)
 			accelerationFile << ddq(k) << endl;
 
 			// uncomment for store this values into files
-			/*
 			gravityFile << gravity(k) << endl;
 			frictionFile << friction(k) << endl;
 			for(int l=0;l < nJoints; l++){
@@ -207,7 +204,6 @@ int main(int argc, char **argv)
 			}
 			massFile << endl;
 			coriolisFile << endl;
-             */
 
 		}
 
@@ -237,12 +233,10 @@ int main(int argc, char **argv)
 	cout << "/FrankaEmikaPandaDynModel/matlab/data/Exciting_Traj/Trajectory_1/rbt_log \n" << endl;
 
 	//uncomment if you stored this values in files
-	/*
 	coriolisFile.close();
 	gravityFile.close();
 	massFile.close();
 	frictionFile.close();
-    */
 
 	cout << "The end" << endl;
 	return EXIT_SUCCESS;
